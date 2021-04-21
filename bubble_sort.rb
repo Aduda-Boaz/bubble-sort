@@ -21,9 +21,7 @@ end
 def bubble_sort_by(array)
   (array.size - 1).times do |i|
     swap_mutex = yield array[i], array[i + 1]
-    unless swap_mutex.positive?
-      array[i], array[i + 1] = array[i + 1], array[i]
-    end
+    array[i], array[i + 1] = array[i + 1], array[i] if swap_mutex.positive?
   end
   puts array
 end
