@@ -20,15 +20,14 @@ end
 
 def bubble_sort_by(array)
   (array.size - 1).times do |i|
-    if (yield array[i], array[i + 1]).positive?
+    swap_mutex = yield array[i], array[i + 1]
+    if swap_mutex.positive?
       array[i], array[i + 1] = array[i + 1], array[i]
     end
   end
   puts array
 end
 
-bubble_sort_by(['hi', 'hello', 'hey']) do |left, right|
+bubble_sort_by(%w[hi hello hey]) do |left, right|
   left.length - right.length
 end
-
-puts numbers
