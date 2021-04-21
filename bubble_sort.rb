@@ -5,7 +5,6 @@ def bubble_sort(array)
   until is_sorted
     is_sorted = swap_if_bigger(array) # if not sorted, we swap
   end
-  return array
 end
 
 def swap_if_bigger(array)
@@ -19,9 +18,6 @@ def swap_if_bigger(array)
   is_sorted
 end
 
-swap_if_bigger(numbers)
-bubble_sort(numbers)
-
 def bubble_sort_by(array)
   (array.size - 1).times do |i|
     if (yield array[i], array[i + 1]).positive?
@@ -31,8 +27,8 @@ def bubble_sort_by(array)
   puts array
 end
 
-bubble_sort_by(["hi","hello","hey"]) do |left,right|
+bubble_sort_by(['hi', 'hello', 'hey']) do |left, right|
   left.length - right.length
 end
 
-puts bubble_sort(numbers)
+puts numbers
