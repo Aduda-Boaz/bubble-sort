@@ -4,8 +4,8 @@ def bubble_sort(array)
   is_sorted = false # a condition to return false if array is sorted
   until is_sorted
     is_sorted = swap_if_bigger(array) # if not sorted, we swap
+    return array if is_sorted
   end
-  return array
 end
 
 def swap_if_bigger(array)
