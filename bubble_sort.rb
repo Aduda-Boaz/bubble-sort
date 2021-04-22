@@ -31,9 +31,8 @@ arr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 p bubble_sort(arr)
 p bubble_sort(numbers)
 
-arr = bubble_sort_by(["h", "hi", "hey", "hiya", "hello"]) do |left, right|
-left.length - right.length
+arr = bubble_sort_by(%w[h hi hey hiya hello]) do |left, right|
+  left.length - right.length
 end
 
 p arr
-
