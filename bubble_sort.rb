@@ -5,6 +5,7 @@ def bubble_sort(array)
   until is_sorted
     is_sorted = swap_if_bigger(array) # if not sorted, we swap
   end
+  return array
 end
 
 def swap_if_bigger(array)
@@ -30,4 +31,4 @@ bubble_sort_by(%w[hi hello hey]) do |left, right|
   left.length - right.length
 end
 
-bubble_sort(numbers)
+p bubble_sort(numbers)
