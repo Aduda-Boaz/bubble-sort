@@ -24,11 +24,16 @@ def bubble_sort_by(array)
     swap_mutex = yield array[i], array[i + 1]
     array[i], array[i + 1] = array[i + 1], array[i] if swap_mutex.positive?
   end
-  puts array
+  array
 end
 
-bubble_sort_by(%w[hi hello hey]) do |left, right|
-  left.length - right.length
-end
-
+arr = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+p bubble_sort(arr)
 p bubble_sort(numbers)
+
+arr = bubble_sort_by(["h", "hi", "hey", "hiya", "hello"]) do |left, right|
+left.length - right.length
+end
+
+p arr
+
