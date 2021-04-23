@@ -36,5 +36,3 @@ arr =  bubble_sort_by(%w[h hi hey hiya hello]) do |left, right|
 end
 
 p arr == %w[h hi hey hiya hello]
-
-
